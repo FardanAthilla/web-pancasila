@@ -1,0 +1,651 @@
+/* Responsive */
+@media (max-width: 768px) {
+
+  /* Sejarah Responsive */
+  .sejarah {
+    flex-direction: column;
+  }
+
+  .sejarah-content {
+    order: 2;
+  }
+
+  .sejarah-img {
+    order: 1;
+  }
+
+  .sejarah-img img {
+    max-width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+  }
+
+  /*Makanan */
+  .judul-makanan {
+    font-size: 2rem;
+    padding: 3rem 5% 0rem;
+  }
+
+  .makanan {
+    flex-direction: column;
+    padding: 1rem 5%;
+    text-align: center;
+  }
+
+  .makanan-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+  }
+
+  .makanan-content p {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+    padding-right: 0;
+    margin-left: 0;
+  }
+
+  .btn-makanan {
+    margin-left: 0;
+  }
+}
+
+/* Semua */
+* {
+  margin: 0;
+  padding: 15;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Warna */
+:root {
+  --bg-color: #DAE1E7;
+  --bg-color2: #27496D;
+  --text-color: #323946;
+  --text-color2: #fff;
+}
+
+/* HTML */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* Body */
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 2rem 9%;
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background-color: transparent;
+  box-shadow: none;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.header.scrolled {
+  background-color: #dae1e7f2;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo img {
+  width: 150px;
+}
+
+.navbar a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-left: 2.5rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-color2);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+#menu-icon {
+  font-size: 3.6rem;
+  display: none;
+}
+
+/* Banner */
+.box {
+  width: 90%;
+  height: 85vh;
+  margin: 10vh auto 0;
+  padding: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-image: url("/public/gambar/banner.png");
+  color: var(--text-color2);
+  border-radius: 10px;
+  position: relative;
+}
+
+.box img {
+  width: 75px;
+  padding-top: 50px;
+}
+
+.box h1 {
+  font-size: 32px;
+  padding-bottom: 25px;
+}
+
+.box p {
+  font-size: 16px;
+}
+
+/* Sejarah */
+.sejarah-semua {
+  background-color: var(--bg-color2);
+  color: var(--text-color2);
+}
+
+/* Sejarah Bagian atas */
+.sejarah {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
+  min-height: 50vh;
+  padding: 10rem 5% 0rem;
+}
+
+.sejarah-content h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.sejarah-content h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.sejarah-content p {
+  font-size: 1.2rem;
+  padding-bottom: 5%;
+  font-weight: 400;
+}
+
+.sejarah-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+/* Button Sejarah */
+.btn-sejarah {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: 1rem var(--text-color2);
+  font-size: 1rem;
+  color: var(--text-color2);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  border: 2px solid var(--bg-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-sejarah:hover {
+  background-color: var(--bg-color);
+  color: var(--bg-color2);
+  cursor: pointer;
+}
+
+/* Gambar */
+.img img {
+  width: 90vh;
+  height: 45vh;
+  padding: 5px 20px;
+}
+
+/* Sejarah Bagian Tengah */
+.sejarah-next {
+  min-height: 50vh;
+  padding: 3rem 5% 2rem;
+}
+
+.sejarah-next p {
+  font-size: 1.2rem;
+  padding-bottom: 4%;
+  font-weight: 400;
+  text-align: left;
+}
+
+/* Sejarah Bagian Bawah */
+.sejarah-afternext {
+  min-height: 30vh;
+  padding: 3rem 0px 0rem 0px;
+  background-color: #27496D;
+  width: 500px;
+  margin: 4rem 60px 0px 0px;
+}
+
+.sejarah-afternext h1 {
+  font-size: 2.6rem;
+  padding: 2% 0px;
+}
+
+.sejarah-afternext p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#logo {
+  font-size: 3rem;
+}
+
+.card-container-sejarah {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Garis Tengah */
+.garis {
+  position: relative;
+  text-align: center;
+}
+
+.garis::after {
+  content: "";
+  display: block;
+  border-top: 3px solid;
+  border-radius: 10px;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+}
+
+/* Makanan */
+.judul-makanan {
+  text-align: center;
+  padding: 7rem 5% 0rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--bg-color2);
+}
+
+.makanan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px 0px 0px;
+  min-height: 50vh;
+  padding: 3rem 5% 0rem;
+  color: var(--bg-color2);
+}
+
+.makanan-content h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+}
+
+.makanan-content p {
+  font-size: 1.2rem;
+  padding-bottom: 5%;
+  font-weight: 400;
+  padding-right: 2rem;
+}
+
+/* Button Makanan */
+.btn-makanan {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--bg-color2);
+  border-radius: 1rem;
+  box-shadow: 1rem var(--text-color2);
+  font-size: 1rem;
+  color: var(--text-color2);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-makanan:hover {
+  background-color: var(--bg-color);
+  color: var(--bg-color2);
+  cursor: pointer;
+}
+
+/* Adat */
+#Adat {
+
+  background-color: var(--bg-color2);
+  margin-top: 100px;
+}
+
+#Adat h1 {
+  text-align: center;
+  padding: 7rem 5% 0rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 550px;
+  background-color: #DAE1E7;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.505);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-content {
+  padding: 16px;
+}
+
+.card-content h3 {
+  font-size: 2.6rem;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: #8EB4DD;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.judul {
+  padding: 0px 16px;
+}
+
+/* Wisata */
+.wisata {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 40px 40px 40px;
+}
+.card2 {
+  position: relative;
+  width: 450px;
+  border-radius: 8px;
+  margin: 0px 15px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.505);
+}
+.info-card2 {
+  position: absolute;
+  width: 90%;
+  border-radius: 10px;
+  height: 70px;
+  bottom: 30px;
+  left: 5%;
+  background: rgba(240, 240, 240, 0.336);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  color: var(--text-color2);
+}
+.info-card2 h2{
+  text-align: left;
+  padding: 0px 0px 0px 10px;
+}
+.info-card2 h3{
+  text-align: left;
+  padding: 15px 0px 0px 10px;
+  font-size: 10px;
+  font-weight: 100;
+}
+.card2 img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .wisata {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card2 {
+    margin: 10px;
+  }
+}
+.judul-wisata1 {
+  text-align: left;
+  padding: 7rem 5% 0rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #142850;
+}
+.judul-wisata2 {
+  text-align: left;
+  padding: 0rem 5% 0rem;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--bg-color2);
+}
+.btn-wisata {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  margin-left: 200px;
+  margin-top: -10px;
+  background-color: var(--text-color2);
+  border-radius: 1rem;
+  box-shadow: 1rem var(--text-color2);
+  font-size: 1rem;
+  color: var(--bg-color2);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, color 0.3s;
+}
+.btn-wisata:hover {
+  background-color: var(--text-color);
+  color: var(--text-color2);
+  cursor: pointer;
+}
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height:800px) {
+  footer {
+    position: static;
+  }
+
+  header {
+    padding-top: 40px;
+  }
+}
+
+.footer-distributed {
+  background-color: #1F1F1F;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 7rem 5%;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+  width: 38%;
+}
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px;
+  margin: 0;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 8px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: #e0ac1c;
+  text-decoration: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+  width: 25%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+  background-color: var(--bg-color2);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--bg-color2);
+  transition: background-color 0.3s, color 0.3s;
+
+}
+
+@media (max-width: 880px) {
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
