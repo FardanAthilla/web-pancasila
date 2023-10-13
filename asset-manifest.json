@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/web-pancasila/static/css/main.e50df858.css",
+    "main.js": "/web-pancasila/static/js/main.389e8db1.js",
+    "static/media/banner.png": "/web-pancasila/static/media/banner.2dbfa3e56f2a8da59383.png",
+    "index.html": "/web-pancasila/index.html",
+    "main.e50df858.css.map": "/web-pancasila/static/css/main.e50df858.css.map",
+    "main.389e8db1.js.map": "/web-pancasila/static/js/main.389e8db1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e50df858.css",
+    "static/js/main.389e8db1.js"
+  ]
+}
